@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 const Navbar = ({ isAuth }) => {
   return (
     <nav className='bg-gray-700'>
@@ -91,12 +91,12 @@ const Navbar = ({ isAuth }) => {
             </div>
           ) : (
             <div className='flex space-x-4'>
-              <a href='#' class='bg-gray-500 text-white px-3 py-2 hover:bg-gray-700 rounded-md text-sm font-bold'>
+              <NavLink to='/register' class='bg-gray-500 text-white px-3 py-2 hover:bg-gray-700 rounded-md text-sm font-bold'>
                 Register
-              </a>
-              <a href='#' class='bg-gray-500 text-white px-3 py-2 rounded-md hover:bg-gray-700 text-sm font-bold'>
+              </NavLink>
+              <NavLink to='/login' class='bg-gray-500 text-white px-3 py-2 rounded-md hover:bg-gray-700 text-sm font-bold'>
                 Login
-              </a>
+              </NavLink>
             </div>
           )}
         </div>
